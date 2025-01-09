@@ -1,10 +1,5 @@
 package com.github;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
-
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -12,12 +7,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
+import org.junit.Ignore;
 import org.junit.Test;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest {
+public class App2Test {
     /**
      * Rigorous Test :-)
      */
@@ -33,6 +32,7 @@ public class AppTest {
     }
 
     @Test
+    @Ignore
     public void attachment2() throws IOException {
         Path file = Paths.get("hello.txt");
         List<String> linesInMemory = Collections.singletonList("HEY HEY");
@@ -40,7 +40,7 @@ public class AppTest {
 
         System.out.println("[[ATTACHMENT|" + file.toAbsolutePath()  + "]]");
 
-        assertThat(true, is(true));
+        assertThat(false, is(true));
     }
 
     @Test
@@ -51,7 +51,7 @@ public class AppTest {
 
         System.out.println("[[ATTACHMENT|" + file.toAbsolutePath()  + "]]");
 
-        assertThat(true, is(true));
+        assertThat(false, is(true));
     }
 
     @Test
@@ -77,6 +77,7 @@ public class AppTest {
     }
 
     @Test
+    @Ignore
     public void attachment6() throws IOException {
         Path file = Paths.get("hello.txt");
         List<String> linesInMemory = Collections.singletonList("HEY HEY");
